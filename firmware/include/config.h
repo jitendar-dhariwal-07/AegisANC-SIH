@@ -5,8 +5,7 @@
 #define OUTPUT_GAIN 0.10f
 #define MIC_BCLK 14
 #define MIC_WS 15
-#define REFERENCE_DATA 13
-#define ERROR_DATA 16
+#define MIC_DATA 13
 #define DAC_BCLK 4
 #define DAC_LRCLK 5
 #define DAC_DATA 6
@@ -15,3 +14,4 @@
 #define BUTTON_PIN 7
 #define OLED_ADDRESS 0x3C
 #define ENABLE_FXLMS 0
+#define MIC_CHANNEL_FORMAT I2S_CHANNEL_FMT_LEFT_RIGHT
