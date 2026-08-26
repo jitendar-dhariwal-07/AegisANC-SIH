@@ -5,3 +5,7 @@ This firmware captures one INMP441 through I2S, runs a bounded NLMS test path, a
 The Arduino routing uses both INMP441 microphones as a stereo I2S input: reference is LEFT and error is RIGHT on the shared DATA line. This build has no DAC output: it performs two-microphone monitor-side adaptive estimation, reports measured RMS telemetry over USB, and updates the OLED. Add a DAC/headphone amplifier before claiming audible anti-noise output.
 
 This is a proof-of-concept signal path. Acoustic cancellation quality depends on microphone geometry, speaker/headphone response, secondary-path delay, gain calibration, and stable enclosure mechanics. Keep a physical bypass and test only at low volume.
+
+## Arduino IDE upload
+
+Open `firmware/AegisANC_Arduino/AegisANC_Arduino.ino` in Arduino IDE. Install the Espressif ESP32 board package and the `Adafruit SSD1306` and `Adafruit GFX Library` libraries. Select `ESP32S3 Dev Module`, choose the correct USB port, enable USB CDC On Boot, select 115200 baud, and upload. This is the no-DAC two-microphone monitor build.
